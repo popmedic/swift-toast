@@ -13,6 +13,7 @@
 		0AAA664F20EA756500584E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAA664E20EA756500584E71 /* Assets.xcassets */; };
 		0AAA665220EA756500584E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAA665020EA756500584E71 /* LaunchScreen.storyboard */; };
 		0AAA665A20EA769B00584E71 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA665920EA769B00584E71 /* Toast.swift */; };
+		0AAA665E20EABD3400584E71 /* UIApplication-makeToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA665D20EABD3400584E71 /* UIApplication-makeToast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0AAA665120EA756500584E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AAA665320EA756500584E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AAA665920EA769B00584E71 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0AAA665D20EABD3400584E71 /* UIApplication-makeToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication-makeToast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0AAA665020EA756500584E71 /* LaunchScreen.storyboard */,
 				0AAA665320EA756500584E71 /* Info.plist */,
 				0AAA665920EA769B00584E71 /* Toast.swift */,
+				0AAA665D20EABD3400584E71 /* UIApplication-makeToast.swift */,
 			);
 			path = ToastExample;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AAA665E20EABD3400584E71 /* UIApplication-makeToast.swift in Sources */,
 				0AAA664A20EA756500584E71 /* ViewController.swift in Sources */,
 				0AAA665A20EA769B00584E71 /* Toast.swift in Sources */,
 				0AAA664820EA756500584E71 /* AppDelegate.swift in Sources */,

@@ -20,9 +20,16 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-Uk-x0g">
                                 <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <state key="normal" title="Demo"/>
+                                <state key="normal" title="Demo class Toast makeToast"/>
                                 <connections>
                                     <action selector="demoButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wxr-Qi-36j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-Fm-RgO">
+                                <rect key="frame" x="11" y="356" width="348" height="30"/>
+                                <state key="normal" title="Demo UIApplication extension makeToast"/>
+                                <connections>
+                                    <action selector="demo2ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1c-9n-27e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -30,6 +37,9 @@
                         <constraints>
                             <constraint firstItem="v9M-Uk-x0g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2kY-FL-OPd"/>
                             <constraint firstItem="v9M-Uk-x0g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Bgi-7F-iCQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3KM-Fm-RgO" secondAttribute="trailing" constant="16" id="GNV-36-eu7"/>
+                            <constraint firstItem="3KM-Fm-RgO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="KMM-Kd-JdU"/>
+                            <constraint firstItem="3KM-Fm-RgO" firstAttribute="top" secondItem="v9M-Uk-x0g" secondAttribute="bottom" constant="8" id="Wab-n7-9EB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v9M-Uk-x0g" secondAttribute="trailing" constant="16" id="i6x-g8-a9v"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
