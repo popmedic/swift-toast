@@ -9,21 +9,18 @@
 import UIKit
 
 public class Toast {
+    private init() { }
+    
     public static var frame = CGRect(
-        x: UIScreen.main.bounds.size.width/2 - 75,
+        x: UIScreen.main.bounds.size.width/2 - (UIScreen.main.bounds.size.width/2 - 16),
         y: UIScreen.main.bounds.size.height - 100,
-        width: 150,
+        width: UIScreen.main.bounds.size.width - 32,
         height: 35
     )
-    
     public static var backgroundColor = UIColor.black.withAlphaComponent(0.6)
     public static var textColor = UIColor.white
     public static var textAlignment = NSTextAlignment.center
     public static var font = UIFont(name: "Montserrat-Light", size: 12.0)
-    
-    private init() {
-        
-    }
     
     public static func makeToast(
         message: String,
@@ -53,5 +50,4 @@ public class Toast {
             print("Unable to get root view controller.")
         }
     }
-    
 }
