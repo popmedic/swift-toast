@@ -45,7 +45,7 @@ UIApplication.shared.makeToast(message: "This is another test", duration: 4.0) {
 }
 ```
 
-You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius by passing them in to the function with there tags.
+You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius by passing them in to the function with their tags.
 
 ```swift
 UIApplication.shared.makeToast(
