@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Toast: ToastProtocol {
+public class Toast {
     private init() { }
     
     public static var frame = CGRect(
