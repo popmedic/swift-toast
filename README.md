@@ -16,9 +16,15 @@ Toast.makeToast(message: "This is a test", duration: 4.0)
 Toast.makeToast(message: "This is a test")
 ```
 
-You can set the backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius using the static variables.
+You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius using the static variables.
 
 ```
+Toast.frame = CGRect(
+    x: UIScreen.main.bounds.size.width/2 - (UIScreen.main.bounds.size.width/2 - 16),
+    y: UIScreen.main.bounds.size.height - 100,
+    width: UIScreen.main.bounds.size.width - 32,
+    height: 35
+)
 Toast.backgroundColor = UIColor.blue
 Toast.textColor = UIColor.green
 Toast.textAlignment = .left
@@ -39,7 +45,7 @@ UIApplication.shared.makeToast(message: "This is another test", duration: 4.0) {
 }
 ```
 
-You can set the backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius by passing them in to the function with there tags.
+You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius by passing them in to the function with there tags.
 
 ```
 UIApplication.shared.makeToast(
