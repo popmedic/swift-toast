@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Toast {
+public class Toast: ToastProtocol {
     private init() { }
     
     public static var frame = CGRect(
@@ -20,7 +20,7 @@ public class Toast {
     public static var backgroundColor = UIColor.black.withAlphaComponent(0.6)
     public static var textColor = UIColor.white
     public static var textAlignment = NSTextAlignment.center
-    public static var font = UIFont(name: "Montserrat-Light", size: 12.0)
+    public static var font = UIFont.systemFont(ofSize: 12.0)
     public static var alpha:CGFloat = 1.0
     public static var cornerRadius:CGFloat = 10.0;
     
