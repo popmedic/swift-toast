@@ -6,7 +6,7 @@ Class to make "Toast," like in Android, for iOS in Swift 4.x.
 
 ### Usage
 
-```
+```swift
 Toast.makeToast(message: "This is a test", duration: 4.0) { (isCompleted) in
     print("complete \(isCompleted)")
 }
@@ -18,7 +18,7 @@ Toast.makeToast(message: "This is a test")
 
 You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius using the static variables.
 
-```
+```swift
 Toast.frame = CGRect(
     x: UIScreen.main.bounds.size.width/2 - (UIScreen.main.bounds.size.width/2 - 16),
     y: UIScreen.main.bounds.size.height - 100,
@@ -39,7 +39,7 @@ UIApplication extension to add a makeToast function
 
 ### Usage
 
-```
+```swift
 UIApplication.shared.makeToast(message: "This is another test", duration: 4.0) { (isCompleted) in
     print("completed: \(isCompleted)")
 }
@@ -47,7 +47,7 @@ UIApplication.shared.makeToast(message: "This is another test", duration: 4.0) {
 
 You can set the frame, backgroundColor, textColor, textAlignment, font, alpha, and cornerRadius by passing them in to the function with there tags.
 
-```
+```swift
 UIApplication.shared.makeToast(
     message: "This is another test",
     duration: 4.0,
