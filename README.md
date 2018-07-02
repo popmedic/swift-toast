@@ -1,4 +1,4 @@
-# swift-toastexample
+# swift-toast
 Class to make "Toast," like in Android, for iOS in Swift 4.x.
 
 ## Usage
