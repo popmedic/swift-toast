@@ -21,11 +21,13 @@ public class Toast {
     public static var textColor = UIColor.white
     public static var textAlignment = NSTextAlignment.center
     public static var font = UIFont(name: "Montserrat-Light", size: 12.0)
+    public static var alpha:CGFloat = 1.0
+    public static var cornerRadius:CGFloat = 10.0;
     
     public static func makeToast(
         message: String,
         duration: TimeInterval = 4.0,
-        _ completion: ((_ complete:Bool)->Void)? = nil
+        completion: ((_ complete:Bool)->Void)? = nil
     ) {
         if let viewController = UIApplication.shared.delegate?.window??.rootViewController {
             let toastLabel = UILabel(frame: Toast.frame)
@@ -33,11 +35,11 @@ public class Toast {
             toastLabel.textColor = Toast.textColor
             toastLabel.textAlignment = Toast.textAlignment;
             toastLabel.font = Toast.font
+            toastLabel.alpha = Toast.alpha
+            toastLabel.layer.cornerRadius = Toast.cornerRadius
+            toastLabel.clipsToBounds  =  true
             
             toastLabel.text = message
-            toastLabel.alpha = 1.0
-            toastLabel.layer.cornerRadius = 10;
-            toastLabel.clipsToBounds  =  true
             
             viewController.view.addSubview(toastLabel)
             UIView.animate(withDuration: 0.4, delay: duration, options: .curveEaseOut, animations: {
