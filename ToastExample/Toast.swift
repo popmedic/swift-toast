@@ -57,7 +57,7 @@ public class Toast {
         duration: TimeInterval = 4.0,
         completion: ((_ complete:Bool)->Void)? = nil
     ) {
-        if let viewController = UIApplication.shared.delegate?.window??.rootViewController {
+        if let viewController = getTopViewController() {
             let toastLabel = UILabel(frame: Toast.frame)
             toastLabel.backgroundColor = Toast.backgroundColor
             toastLabel.textColor = Toast.textColor
@@ -77,7 +77,19 @@ public class Toast {
                 completion?(isCompleted)
             })
         } else {
-            print("Unable to get root view controller.")
+            print("Unable to get top view controller.")
+        }
+    }
+    
+    private static func getTopViewController(_ viewController: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
+        if let tabBarViewController = viewController as? UITabBarController {
+            return getTopViewController(tabBarViewController.selectedViewController)
+        } else if let navigationController = viewController as? UINavigationController {
+            return getTopViewController(navigationController.visibleViewController)
+        } else if let presentedViewController = viewController?.presentedViewController {
+            return getTopViewController(presentedViewController)
+        } else {
+            return viewController
         }
     }
 }

@@ -39,7 +39,7 @@ extension UIApplication {
         cornerRadius:CGFloat = 10,
         completion: ((_ complete:Bool)->Void)? = nil
     ) {
-        if let viewController = self.delegate?.window??.rootViewController {
+        if let viewController = self.getTopViewController(self.delegate?.window??.rootViewController) {
             let toastLabel = UILabel(frame: frame)
             toastLabel.backgroundColor = backgroundColor
             toastLabel.textColor = textColor
@@ -59,7 +59,19 @@ extension UIApplication {
                 completion?(isCompleted)
             })
         } else {
-            print("Unable to get root view controller.")
+            print("Unable to get top view controller.")
+        }
+    }
+    
+    private func getTopViewController(_ viewController: UIViewController?) -> UIViewController? {
+        if let tabBarViewController = viewController as? UITabBarController {
+            return getTopViewController(tabBarViewController.selectedViewController)
+        } else if let navigationController = viewController as? UINavigationController {
+            return getTopViewController(navigationController.visibleViewController)
+        } else if let presentedViewController = viewController?.presentedViewController {
+            return getTopViewController(presentedViewController)
+        } else {
+            return viewController
         }
     }
 }
