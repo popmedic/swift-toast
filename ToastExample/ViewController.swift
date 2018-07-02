@@ -22,11 +22,11 @@ class ViewController: UIViewController {
 
     @IBAction func demoButtonAction(_ sender: Any) {
         Toast.backgroundColor = UIColor.init(red: 0.0, green: 1.0, blue: 0.0, alpha: 0.6)
-        Toast.textColor = UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        Toast.textAlignment = .left
+        Toast.textColor = UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.6)
+        Toast.textAlignment = .center
         Toast.font = UIFont.systemFont(ofSize: 14.0)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            Toast.makeToast(message: "This is a test", duration: 10.0) { (isComplete) in
+            Toast.makeToast(message: "This is a test", duration: 4.0) { (isComplete) in
                 print("complete")
             }
         }
