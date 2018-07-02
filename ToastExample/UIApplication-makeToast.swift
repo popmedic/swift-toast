@@ -9,6 +9,19 @@
 import UIKit
 
 extension UIApplication {
+/**
+ Makes a "Toast" like in Android.
+ - Parameter message: string to display in toast
+ - Parameter duration: time interval to show the toast, defaults to 4 seconds
+ - Parameter frame: x, y point and width, height of toast, defaults to bottom center
+ - Parameter backgroundColor: color to make the background of toast, defaults to gray
+ - Parameter textColor: color of the text in the toast, defaults to white
+ - Parameter textAlignment: alignment of the text in the toast, defaults to center
+ - Parameter font: font to use for the toast, defaults to system font (size 12)
+ - Parameter alpha: alpha of the toast, defaults to 1.0 (solid)
+ - Parameter cornerRadius: radius of the toast corners, defaults to 10.0 pt
+ - Parameter completion: func to run when toast is complete, defaults to nil
+ */
     public func makeToast(
         message: String,
         duration: TimeInterval = 4.0,
