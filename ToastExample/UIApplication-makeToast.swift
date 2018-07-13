@@ -71,7 +71,11 @@ extension UIApplication {
         } else if let presentedViewController = viewController?.presentedViewController {
             return getTopViewController(presentedViewController)
         } else {
-            return viewController
+            return (
+                viewController?.tabBarController ?? (
+                    viewController?.navigationController ?? viewController
+                )
+            )
         }
     }
 }

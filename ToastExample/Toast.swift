@@ -10,6 +10,16 @@ import UIKit
 
 /**
  Class to make "Toast," like in Android, for iOS in Swift 4.x.
+ example:
+ ```
+ Toast.backgroundColor = UIColor.init(red: 0.0, green: 1.0, blue: 0.0, alpha: 0.6)
+ Toast.textColor = UIColor.init(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.6)
+ Toast.textAlignment = .center
+ Toast.font = UIFont.systemFont(ofSize: 14.0)
+ Toast.makeToast(message: "This is a test", duration: 4.0) { (isCompleted) in
+    print("completed: \(isCompleted)")
+ }
+ ```
  */
 public class Toast {
     private init() { }
@@ -89,7 +99,11 @@ public class Toast {
         } else if let presentedViewController = viewController?.presentedViewController {
             return getTopViewController(presentedViewController)
         } else {
-            return viewController
+            return (
+                viewController?.tabBarController ?? (
+                    viewController?.navigationController ?? viewController
+                )
+            )
         }
     }
 }
