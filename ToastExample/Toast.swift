@@ -23,13 +23,14 @@ import UIKit
  */
 public class Toast {
     private init() { }
+    private static let keyWindow = UIApplication.shared.windows[UIApplication.shared.windows.count-1]
 /**
  x, y point and width, height of toast, defaults to bottom center
  */
     public static var frame = CGRect(
-        x: UIScreen.main.bounds.size.width/2 - (UIScreen.main.bounds.size.width/2 - 16),
-        y: UIScreen.main.bounds.size.height - 100,
-        width: UIScreen.main.bounds.size.width - 32,
+        x: Toast.keyWindow.frame.size.width/2 - (Toast.keyWindow.frame.size.width/2 - 16),
+        y: Toast.keyWindow.frame.size.height - 100,
+        width: Toast.keyWindow.frame.size.width - 32,
         height: 35
     )
 /**
@@ -67,7 +68,7 @@ public class Toast {
         duration: TimeInterval = 4.0,
         completion: ((_ complete:Bool)->Void)? = nil
     ) {
-        if let viewController = getTopViewController() {
+        if let viewController = UIApplication.shared.delegate?.window??.rootViewController {//getTopViewController() {
             let toastLabel = UILabel(frame: Toast.frame)
             toastLabel.backgroundColor = Toast.backgroundColor
             toastLabel.textColor = Toast.textColor
@@ -90,7 +91,6 @@ public class Toast {
             print("Unable to get top view controller.")
         }
     }
-    
     private static func getTopViewController(_ viewController: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
         if let tabBarViewController = viewController as? UITabBarController {
             return getTopViewController(tabBarViewController.selectedViewController)
@@ -100,8 +100,8 @@ public class Toast {
             return getTopViewController(presentedViewController)
         } else {
             return (
-                viewController?.tabBarController ?? (
-                    viewController?.navigationController ?? viewController
+                viewController?.navigationController ?? (
+                    viewController?.tabBarController ?? viewController
                 )
             )
         }

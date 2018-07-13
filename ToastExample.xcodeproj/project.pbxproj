@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA5C27B20F9335200543DA0 /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5C27A20F9335100543DA0 /* Tab1ViewController.swift */; };
+		0AA5C27D20F9380700543DA0 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA5C27C20F9380700543DA0 /* ViewController2.swift */; };
 		0AAA664820EA756500584E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA664720EA756500584E71 /* AppDelegate.swift */; };
 		0AAA664A20EA756500584E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAA664920EA756500584E71 /* ViewController.swift */; };
 		0AAA664D20EA756500584E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAA664B20EA756500584E71 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AA5C27A20F9335100543DA0 /* Tab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
+		0AA5C27C20F9380700543DA0 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		0AAA664420EA756500584E71 /* ToastExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToastExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAA664720EA756500584E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AAA664920EA756500584E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		0AAA664620EA756500584E71 /* ToastExample */ = {
 			isa = PBXGroup;
 			children = (
+				0AA5C27C20F9380700543DA0 /* ViewController2.swift */,
 				0AAA664720EA756500584E71 /* AppDelegate.swift */,
 				0AAA664920EA756500584E71 /* ViewController.swift */,
 				0AAA664B20EA756500584E71 /* Main.storyboard */,
@@ -66,6 +71,7 @@
 				0AAA665320EA756500584E71 /* Info.plist */,
 				0AAA665920EA769B00584E71 /* Toast.swift */,
 				0AAA665D20EABD3400584E71 /* UIApplication-makeToast.swift */,
+				0AA5C27A20F9335100543DA0 /* Tab1ViewController.swift */,
 			);
 			path = ToastExample;
 			sourceTree = "<group>";
@@ -145,7 +151,9 @@
 				0AAA665E20EABD3400584E71 /* UIApplication-makeToast.swift in Sources */,
 				0AAA664A20EA756500584E71 /* ViewController.swift in Sources */,
 				0AAA665A20EA769B00584E71 /* Toast.swift in Sources */,
+				0AA5C27B20F9335200543DA0 /* Tab1ViewController.swift in Sources */,
 				0AAA664820EA756500584E71 /* AppDelegate.swift in Sources */,
+				0AA5C27D20F9380700543DA0 /* ViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
